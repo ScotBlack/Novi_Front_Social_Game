@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LobbyHeader() {
+function Header() {
     return (
         <>
             <h1 className="game_title">Game Lobby</h1>
@@ -17,4 +17,4 @@ function LobbyHeader() {
     )
 }
 
-export default LobbyHeader;
+export default Header;
