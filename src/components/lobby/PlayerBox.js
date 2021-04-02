@@ -5,8 +5,10 @@ function PlayerBox() {
 
     return (
         <>
-            <Player name={"ian"} id={"3"} />
-            <Player name={"sjoerd"} id={"4"}/>
+
+            <Player  />
+
+
         </>
     )
 };

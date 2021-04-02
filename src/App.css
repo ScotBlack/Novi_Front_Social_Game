@@ -60,6 +60,7 @@ th {
 .player.red {
   background: rgb(240,28,67);
   background: linear-gradient(180deg, rgba(240,28,67,1) 9%, rgba(158,12,51,1) 96%);
+
 }
 
 .player.blue {
