@@ -20,15 +20,16 @@ class Playerz extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {color: null};
+        this.state = {  color: null,
+            name: null};
 
         axios.get('http://localhost:8080/test/player/3', { timeout: 500})
-            .then(res => this.setState({color: res.data.color}))
+            .then(res => this.setState({color: res.data.color, name: res.data.name}))
     }
 
 
     render() {
-        return <article className={"player " + this.state.color} ><h2 className={"player_name"}>{"test"}</h2></article>
+        return <article className={"player " + this.state.color} ><h2 className={"player_name"}>{this.state.name}</h2></article>
     }
 }
 

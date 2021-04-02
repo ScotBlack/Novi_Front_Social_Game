@@ -63,7 +63,7 @@ th {
 
 }
 
-.player.blue {
+.player.BLUE {
   background: rgb(49,65,163);
   background: linear-gradient(180deg, rgba(49,65,163,1) 12%, rgba(25,49,130,1) 95%);;
 }
