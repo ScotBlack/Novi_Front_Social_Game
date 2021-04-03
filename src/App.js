@@ -1,4 +1,5 @@
 import React from 'react';
+import NewPlayer from "./components/lobby/NewPlayer";
 
 
 import './App.css';
@@ -11,6 +12,7 @@ function App() {
    <Content>
      <Header />
      <PlayerBox />
+
 
    </Content>
   );
