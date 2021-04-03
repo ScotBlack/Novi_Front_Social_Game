@@ -68,4 +68,33 @@ th {
   background: linear-gradient(180deg, rgba(49,65,163,1) 12%, rgba(25,49,130,1) 95%);;
 }
 
+.player.GREEN {
+  background: rgb(65,147,78);
+  background: linear-gradient(180deg, rgba(65,147,78,1) 9%, rgba(29,102,33,1) 96%);
+}
+
+.player.YELLOW {
+  background: rgb(249,242,107);
+  background: linear-gradient(180deg, rgba(249,242,107,1) 12%, rgba(187,204,4,1) 95%);
+}
+
+.player.TEAL {
+  background: rgb(107,236,249);
+  background: linear-gradient(180deg, rgba(107,236,249,1) 12%, rgba(6,156,159,1) 95%);
+}
+
+.player.PINK {
+  background: rgb(232,173,230);
+  background: linear-gradient(180deg, rgba(232,173,230,1) 12%, rgba(231,100,210,1) 95%);
+}
+
+.player.ORANGE {
+  background: rgb(255,196,111);
+  background: linear-gradient(180deg, rgba(255,196,111,1) 12%, rgba(238,141,21,1) 95%);
+}
+
+.player.PURPLE {
+  background: rgb(200,111,255);
+  background: linear-gradient(180deg, rgba(200,111,255,1) 12%, rgba(117,6,195,1) 95%);
+}
 

@@ -2,32 +2,45 @@ import React from 'react'
 import axios from 'axios'
 import Player from "./Player";
 
-class PlayerBox extends React.Component {
 
-    state = {players: [], numPlayers: null, errorMessage: ''};
+
+class PlayerBox extends React.Component {
+    constructor(props) {
+        super(props);
+        this._isMounted= false;
+
+        // this.toggleColor = this.toggleColor.bind(this);
+        this.state = {players: [], errorMessage: ''};
+    }
+
+
 
     componentDidMount() {
-        axios.get('http://localhost:8080/test/game/1/players',{ timeout: 500})
-            .then(res => this.setState({players : res.data}),
-                (err => this.setState({errorMessage: err})))
+        this._isMounted = true;
 
+        axios.get('http://localhost:8080/test/game/1/players',{ timeout: 500})
+            .then(res => this._isMounted && this.setState({players : res.data}),
+                (err => this._isMounted && this.setState({errorMessage: err})))
     }
+
+    componentDidUpdate() {
+        console.log(this.state.players)
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
 
     render() {
-        const players = this.state.players;
-
+        let players = this.state.players;
+    console.log("rendered")
         return (
             <div>
-                <Player/>
-                {players.map( player => <h1>{player.name}</h1>)}
+                {players.map( player => <Player  key={player.id} id={player.id} name={player.name} color={player.color} phone={player.phone} />)}
             </div>
         )
-
     }
-
-
-
-
-};
+}
 
 export default PlayerBox;
