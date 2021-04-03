@@ -98,3 +98,23 @@ th {
   background: linear-gradient(180deg, rgba(200,111,255,1) 12%, rgba(117,6,195,1) 95%);
 }
 
+.player.new {
+  background: rgb(182,180,227);
+  background: linear-gradient(8deg, rgba(182,180,227,0.9416141456582633) 0%, rgba(204,244,243,1) 100%);
+}
+
+.new_player {
+padding-top: 35px;
+padding-left: 20px;
+}
+
+.new_player.input {
+  width:120px;
+  padding: 5px;
+}
+
+.new_player.submit {
+  margin: 0;
+  padding: 5px;
+  /*background-color: #4CAF50;*/
+}

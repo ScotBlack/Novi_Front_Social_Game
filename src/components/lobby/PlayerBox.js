@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Player from "./Player";
+import NewPlayer from "./NewPlayer"
 
 
 
@@ -38,6 +39,7 @@ class PlayerBox extends React.Component {
         return (
             <div>
                 {players.map( player => <Player  key={player.id} id={player.id} name={player.name} color={player.color} phone={player.phone} />)}
+                <NewPlayer />
             </div>
         )
     }
