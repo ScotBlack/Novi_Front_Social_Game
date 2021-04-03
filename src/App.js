@@ -1,7 +1,4 @@
 import React from 'react';
-import NewPlayer from "./components/lobby/NewPlayer";
-
-
 import './App.css';
 import Content from "./components/Content";
 import Header from "./components/lobby/Header";
