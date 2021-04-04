@@ -3,7 +3,7 @@ import React from 'react';
 
 function Content({children}) {
     return (
-        <div id="content">
+        <div className="content">
             {children}
 
         </div>
