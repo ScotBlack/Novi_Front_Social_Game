@@ -14,8 +14,6 @@ class PlayerBox extends React.Component {
         this.state = {players: [], errorMessage: ''};
     }
 
-
-
     componentDidMount() {
         this._isMounted = true;
 
@@ -34,7 +32,11 @@ class PlayerBox extends React.Component {
 
 
     render() {
-        let players = this.state.players;
+        // let players = this.state.players;
+        const players = [].concat(this.state.players)
+            .sort((a, b) => a.id > b.id ? 1 : -1);
+
+
     console.log("rendered")
         return (
             <div>
