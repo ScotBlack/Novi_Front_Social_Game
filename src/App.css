@@ -8,10 +8,12 @@ th {
 }
 
 #content {
+  display: block;
+  overflow: auto;
   border-radius: 100px;
   margin: 0 auto;
   width: 600px;
-  height:900px;
+  /*height: 100%;*/
   background: #89CBFF;
 }
 
@@ -117,4 +119,13 @@ padding-left: 20px;
   margin: 0;
   padding: 5px;
   /*background-color: #4CAF50;*/
+}
+
+.footer {
+  margin-top: 20px;
+  float: right;
+  /*position: relative;*/
+  width:600px;
+  height: 150px;
+  background:pink;
 }

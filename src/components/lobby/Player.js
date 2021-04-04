@@ -23,11 +23,10 @@ class Player extends React.Component {
 
     componentDidMount() {
         this._isMounted = true;
-        console.log("player Did Mount")
     }
 
     componentDidUpdate() {
-        console.log("player Did Update")
+
     }
 
     render() {

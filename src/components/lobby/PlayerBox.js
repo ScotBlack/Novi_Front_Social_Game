@@ -32,12 +32,9 @@ class PlayerBox extends React.Component {
 
 
     render() {
-        // let players = this.state.players;
         const players = [].concat(this.state.players)
             .sort((a, b) => a.id > b.id ? 1 : -1);
 
-
-    console.log("rendered")
         return (
             <div>
                 {players.map( player => <Player  key={player.id} id={player.id} name={player.name} color={player.color} phone={player.phone} />)}
