@@ -67,9 +67,6 @@ class Footer extends React.Component {
                     <article className={"slidervalue"}  onClick={(e) => {this.onGameTypeChange("FFA")}}>FFA</article>
                     <article className={"slidervalue"}  onClick={(e) => {this.onGameTypeChange("TEAMS")}}>Teams</article>
 
-
-
-
                 </div>
             </div>
 
