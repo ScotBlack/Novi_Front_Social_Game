@@ -23,10 +23,10 @@ class NewPlayer extends React.Component  {
         }
 
         axios
-            .post('http://localhost:8080/test/newplayer',{
+            .post('http://localhost:8080/player/join',{
                 name:this.state.name,
                 phone:"true",
-                gameId:1
+                gameId:5
             })
             .then(res => console.log(newPlayer))
             .catch(err => console.log(err));

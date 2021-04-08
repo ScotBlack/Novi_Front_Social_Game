@@ -17,7 +17,7 @@ class PlayerBox extends React.Component {
     componentDidMount() {
         this._isMounted = true;
 
-        axios.get('http://localhost:8080/test/game/1/players',{ timeout: 500})
+        axios.get('http://localhost:8080/game/5/players',{ timeout: 500})
             .then(res => this._isMounted && this.setState({players : res.data}),
                 (err => this._isMounted && this.setState({errorMessage: err})))
     }

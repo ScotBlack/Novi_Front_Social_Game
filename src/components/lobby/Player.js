@@ -12,7 +12,7 @@ class Player extends React.Component {
     }
 
     toggleColor (id) {
-        axios.get('http://localhost:8080/test/player/toggle/' + id , {timeout:500})
+        axios.get('http://localhost:8080/player/toggle/' + id , {timeout:500})
             .then(res  => {
                 console.log(res.data.color)
                 this.setState({color: res.data.color} )

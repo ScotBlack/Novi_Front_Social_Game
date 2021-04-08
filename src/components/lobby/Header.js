@@ -7,6 +7,7 @@ class Header extends React.Component {
         this._isMounted= false;
 
         this.state = {
+            class:'header_status red',
             gameId: null,
             canStart: false,
             status:'',
@@ -19,8 +20,9 @@ class Header extends React.Component {
     componentDidMount() {
         this._isMounted = true;
 
-        axios.get('http://localhost:8080/test/game/1/lobbyHeader',{ timeout: 500})
+        axios.get('http://localhost:8080/lobby/7/status',{ timeout: 500})
             .then (res => this._isMounted && this.setState({
+                class: res.data.canStart? 'header_status green' : 'header_status red' ,
                 gameId: res.data.gameId,
                 canStart : res.data.canStart,
                 status: res.data.status,
@@ -28,6 +30,8 @@ class Header extends React.Component {
                 points: res.data.points
             }),
                 (err => this._isMounted && this.setState({errorMessage: err})))
+
+
     }
 
     componentWillUnmount() {
@@ -45,10 +49,10 @@ class Header extends React.Component {
                     Points: {this.state.points}
                 </article>
                 <article className={"header_info"}>
-                    GameType: {this.state.gameType}
+                    Game: {this.state.gameType}
                 </article>
 
-                <p className={"header_status red"}> {this.state.status}</p>
+                <p className={this.state.class}> {this.state.status}</p>
                 <div className={"header_startbox"}>
                     <button type ="submit" className={"header_start_button"}>Start</button>
                 </div>

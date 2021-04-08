@@ -12,7 +12,7 @@ h1 {
   min-height: 800px;
   margin: 0 auto;
 
-  padding-bottom: 180px;
+  padding-bottom: 280px;
   /*display: block;*/
   overflow: auto;
   border-radius: 100px;
@@ -71,6 +71,10 @@ h1 {
   text-align: center;
 }
 
+.header_status.green {
+  background:green;
+}
+
 .header_status.red {
   background:#de5269;
 }
@@ -92,7 +96,6 @@ h1 {
 
   width: 300px;
   height: 50px;
-
 }
 
 /*Player Box*/
@@ -178,27 +181,41 @@ padding-left: 20px;
 }
 
 .footer {
-  /*margin-top: 200px;*/
   position: absolute;
+  border-radius: 75px;
   bottom: 0;
   width:600px;
-  height: 150px;
-  /*background:pink;*/
+  height: 250px;
+  /*text-align: center;*/
+  font-size: 20px;
+  font-weight: bold;
+  background:lightsalmon;
 }
 
 .footer_box {
   padding: 30px;
 }
 
-.footer_status {
-  font-size: 24px;
-  color:red;
+.footertitle {
+  margin-left: 75px;
+}
+.slidervalue {
+  margin-left: 65px;
+  border-radius:15px;
+  padding:10px;
+  width: 100px;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #323134;
+  background: lightgreen;
+  text-align: center;
 }
 
-.footer_submit {
-  position: absolute;
-  border-radius: 20px;
-  right: 80px;
-  width: 180px;
-  height: 80px;
+.slidervalue:hover {
+  background: lightseagreen;
+}
+
+.slidervalue.latter {
+  margin-left: 50px;
 }
